@@ -8,8 +8,8 @@
 #define INC_USART_H_
 
 #include "stm32f407xx.h"
-#include "RCC.h"
-#include "Systick.h"
+#include "rcc.h"
+#include "systick.h"
 
 #ifdef __cplusplus
 extern "C" {
