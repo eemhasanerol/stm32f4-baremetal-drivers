@@ -1,5 +1,5 @@
 /**
- * @file    SPI.h
+ * @file    spi.h
  * @brief   Bare-Metal SPI driver for STM32F407
  * @author  Hasan Erol
  */
