@@ -7,15 +7,13 @@
 #ifndef INC_I2C_H_
 #define INC_I2C_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <stdint.h>
-#include <stddef.h>
 #include "stm32f407xx.h"
 #include "rcc.h"
 #include "systick.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* ========================================================================================= */
 /*                      I2C Configuration and Status Definitions                             */
