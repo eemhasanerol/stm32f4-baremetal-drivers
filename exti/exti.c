@@ -4,7 +4,7 @@
  * @author  Hasan Erol
  */
 
-#include "EXTI.h"
+#include "exti.h"
 
 /* ========================================================================================= */
 /*                                EXTI Line Configuration                                   */
