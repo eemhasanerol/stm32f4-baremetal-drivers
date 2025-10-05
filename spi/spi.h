@@ -10,7 +10,6 @@
 #include "stm32f407xx.h"
 #include "rcc.h"
 #include "systick.h"
-#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
