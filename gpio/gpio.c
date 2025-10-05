@@ -1,10 +1,10 @@
 /**
- * @file    GPIO.c
+ * @file    gpio.c
  * @brief   GPIO driver implementation for STM32F407
  * @author  Hasan Erol
  */
 
-#include "GPIO.h"
+#include "gpio.h"
 
 /**
  * @brief  Sets or resets the selected GPIO output pin
