@@ -1,5 +1,5 @@
 /**
- * @file    GPIO.h
+ * @file    gpio.h
  * @brief   General-Purpose Input/Output (GPIO) driver for STM32F407
  * @author  Hasan Erol
  */
