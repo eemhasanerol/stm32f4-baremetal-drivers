@@ -12,8 +12,8 @@
 
 /**
  * @brief  Configure EXTI line mapping to a GPIO port
- * @param  PortSource  GPIO port source (e.g. @ref EXTI_PORTSOURCE_GPIOA)
- * @param  LineSource  EXTI line number (e.g. @ref EXTI_LineSource_0)
+ * @param  PortSource  GPIO port source (see @ref exti_port_t)
+ * @param  LineSource  EXTI line number (see @ref exti_line_t)
  * @retval None
  */
 void EXTI_LineConfig(exti_port_t PortSource, exti_line_t LineSource)
