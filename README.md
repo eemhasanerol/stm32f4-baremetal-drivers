@@ -36,7 +36,7 @@ stm32f4-baremetal-drivers/
 │
 ├── Core/                 # Startup and system initialization
 │
-├── Drivers/              # RCC, GPIO, SysTick, EXTI, I2C, SPI drivers
+├── Drivers/              # RCC, GPIO, EXTI, I2C, SPI drivers
 │
 ├── Examples/             # Example projects using drivers
 │   ├── GPIO_LED_Toggle/
