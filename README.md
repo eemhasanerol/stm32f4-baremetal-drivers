@@ -1,23 +1,47 @@
-# Bare-Metal STM32F4 Peripheral Drivers
+# ⚙️ STM32F4 Bare-Metal Drivers
 
-### 🧠 Overview
-This repository provides a collection of **bare-metal peripheral drivers** for the **STM32F407** microcontroller, written in pure **C (no HAL, no CMSIS)**.  
-Each driver is implemented with a clean modular structure and minimal dependencies, designed for **low-level embedded system development** and educational purposes.
-
----
-
-### ⚙️ Supported Drivers
-| Peripheral | Description |
-|-------------|-------------|
-| **GPIO**    | General-Purpose I/O configuration, digital input/output, and EXTI interrupt control |
-| **RCC**     | Reset and Clock Control — provides system, AHB/APB clock configuration and frequency calculation |
-| **SPI**     | Serial Peripheral Interface master/slave driver with blocking and interrupt-based APIs |
-| **I2C**     | Inter-Integrated Circuit communication (master mode) with register-level control |
-| **USART**   | Universal Synchronous/Asynchronous Receiver/Transmitter for serial communication |
-| **SysTick** | System timer for time base, delays, and periodic tick generation |
-
-Each module is fully independent and includes its own header (`.h`) and source (`.c`) files.
+Low-level peripheral drivers for **STM32F407** written entirely in **C** — no HAL, no CubeMX, just pure register-level control.  
+Developed to demonstrate understanding of **bare-metal embedded systems programming** and peripheral-level architecture.
 
 ---
 
-### 📁 Directory Structure
+## 🧩 Implemented Drivers
+- **RCC** – Clock control and peripheral enable
+- **GPIO** – Pin configuration and alternate functions
+- **SysTick** – Millisecond delay and timing
+- **EXTI** – External interrupt handling
+- **I2C** – Blocking I2C master communication
+- **SPI** – Full-duplex master communication
+
+---
+
+## 🧠 Example Projects
+Each project under `/Examples` demonstrates a specific peripheral:
+
+| Example | Description |
+|----------|--------------|
+| `GPIO_LED_Toggle` | Toggles LEDs on PD13/PD15 using SysTick delay |
+| `EXTI_Button_LED` | Toggles LED via external interrupt on user button |
+| `I2C_DeviceID_Read` | Reads WHO_AM_I register (e.g., MPU6050) over I2C1 |
+| `SPI_DeviceID_Read` | Reads VersionReg (0x37) from MFRC522 over SPI1; LED PD13 lights if success, remains off if fail |
+
+---
+
+## 🗂 Directory Overview
+
+---
+
+## 🔧 Build Info
+- **MCU:** STM32F407VG  
+- **Clock:** 16 MHz (HSI)  
+- **Toolchain:** STM32CubeIDE / Keil / arm-none-eabi-gcc  
+- **Language Standard:** C99  
+- **Core:** ARM Cortex-M4  
+
+---
+
+## 👨‍💻 Author
+**Hasan Erol**  
+*Embedded Software Engineer Intern*  
+Bare-metal firmware • STM32 • C • Peripheral Drivers  
+🔗 [github.com/hasanerol](https://github.com/hasanerol)
