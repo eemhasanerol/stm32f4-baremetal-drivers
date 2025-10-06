@@ -74,8 +74,7 @@ void SPI_Init(SPI_HandleTypeDef_t *hspi)
     tempReg |= (hspi->Init.BaudRate << SPI_CR1_BR_POS);
 
     /* Clock polarity and phase */
-    tempReg |= (hspi->Init.CPOL << SPI_CR1_CPOL_POS);
-    tempReg |= (hspi->Init.CPHA << SPI_CR1_CPHA_POS);
+    tempReg |= (hspi->Init.CPOL << SPI_CR1_CPOL_POS) | (hspi->Init.CPHA << SPI_CR1_CPHA_POS);
 
     /* Data frame format */
     tempReg |= (hspi->Init.DataSize << SPI_CR1_DFF_POS);
