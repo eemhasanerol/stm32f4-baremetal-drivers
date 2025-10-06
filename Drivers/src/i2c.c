@@ -187,7 +187,7 @@ void I2C_Init(I2C_HandleTypeDef_t *hi2c)
 
 
 /**
- * @brief  Deinitializes the specified I2C peripheral and resets its software handle.
+ * @brief  DeiIitializes the specified I2C peripheral and resets its software handle.
  * @param  hi2c Pointer to an I2C handle structure that contains
  *         the configuration information for the specified I2C module.
  * @retval None
@@ -195,7 +195,7 @@ void I2C_Init(I2C_HandleTypeDef_t *hi2c)
  * @note   Performs a hardware peripheral reset via RCC and clears the
  *         handle fields to their default values.
  */
-void I2C_Deinit(I2C_HandleTypeDef_t *hi2c)
+void I2C_DeInit(I2C_HandleTypeDef_t *hi2c)
 {
     if ((hi2c == NULL) || (hi2c->Instance == NULL))
         return ;
