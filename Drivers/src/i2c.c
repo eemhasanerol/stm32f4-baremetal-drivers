@@ -1,10 +1,10 @@
-	/*
- * i2c.c
- * I2C driver implementation (STM32F407) matching i2c.h
- * Created: Sep 1, 2025   Author: erol-tesla
+/**
+ * @file    i2c.c
+ * @brief   I2C driver implementation for STM32F407 (bare-metal)
+ * @author  Hasan Erol
  */
 
-#include "I2C.h"
+#include "i2c.h"
 
 /* -------------------------------------------------------------------------- */
 /* Local helpers (private)                                                    */
