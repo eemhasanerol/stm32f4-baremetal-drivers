@@ -16,14 +16,14 @@ Developed to demonstrate understanding of **bare-metal embedded systems programm
 ---
 
 ## 🧠 Example Projects
-Each project under `/Examples` demonstrates a specific peripheral:
+Each project under `/Examples` demonstrates a peripheral in bare-metal operation:
 
 | Example | Description |
 |----------|--------------|
-| `GPIO_LED_Toggle` | Toggles LEDs on PD13/PD15 using SysTick delay |
-| `EXTI_Button_LED` | Toggles LED via external interrupt on user button |
-| `I2C_DeviceID_Read` | Reads WHO_AM_I register (e.g., MPU6050) over I2C1 |
-| `SPI_DeviceID_Read` | Reads VersionReg (0x37) from MFRC522 over SPI1; LED PD13 lights if success, remains off if fail |
+| `GPIO_LED_Toggle` | Blinks LEDs using SysTick-based delay. |
+| `EXTI_Button_LED` | Toggles an LED when the user button is pressed via EXTI interrupt. |
+| `I2C_DeviceID_Read` | Reads device ID (e.g., MPU6050 WHO_AM_I) over I2C. |
+| `SPI_DeviceID_Read` | Reads device version register over SPI. |
 
 ---
 
