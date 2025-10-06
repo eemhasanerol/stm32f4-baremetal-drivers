@@ -117,7 +117,7 @@ uint32_t SysTick_GetTick(void)
  * @brief  Blocking delay function.
  * @param  ms Delay duration in milliseconds.
  */
-void SysTick_Delay_ms(uint32_t ms)
+void delay_ms(uint32_t ms)
 {
     uint32_t start = systick_ms;
     while ((uint32_t)(systick_ms - start) < ms);
