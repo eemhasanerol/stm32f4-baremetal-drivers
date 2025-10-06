@@ -171,7 +171,7 @@ typedef struct
 /*                                   Public API Prototypes                                   */
 /* ========================================================================================= */
 
-/* Initialization / Deinitialization ------------------------------------------------------- */
+/* Initialization / DeInitialization ------------------------------------------------------- */
 void I2C_Init(I2C_HandleTypeDef_t *hi2c);
 void I2C_DeInit(I2C_HandleTypeDef_t *hi2c);
 
