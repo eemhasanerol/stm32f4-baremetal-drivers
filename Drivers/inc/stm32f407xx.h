@@ -49,22 +49,6 @@ typedef enum
 	ENABLE = !DISABLE
 }FunctionalState_t;
 
-
-/* ========================================================================== */
-/*                              IRQ Numbers                                   */
-/* ========================================================================== */
-typedef enum
-{
-    EXTI0_IRQNumber      = 6,   /*!< EXTI Line0 Interrupt */
-    EXTI1_IRQNumber      = 7,   /*!< EXTI Line1 Interrupt */
-    EXTI2_IRQNumber      = 8,   /*!< EXTI Line2 Interrupt */
-    EXTI3_IRQNumber      = 9,   /*!< EXTI Line3 Interrupt */
-    EXTI4_IRQNumber      = 10,  /*!< EXTI Line4 Interrupt */
-    EXTI9_5_IRQNumber    = 23,  /*!< EXTI Line[9:5] Interrupt */
-    EXTI15_10_IRQNumber  = 40   /*!< EXTI Line[15:10] Interrupt */
-} EXTI_IRQNumber_t;
-
-
 /* ========================================================================== */
 /*                         Base Memory Addresses                              */
 /* ========================================================================== */
