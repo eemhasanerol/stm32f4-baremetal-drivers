@@ -11,10 +11,47 @@ SYSTICK_HandleTypeDef_t hsystick;
 volatile uint32_t systick_ms;
 
 /**
- * @brief  Initialize SysTick timer.
- * @param  hsystick Pointer to handle structure.
+ * @brief  Initialize SysTick timer with default configuration.
+ * @param  tick_hz Tick frequency in Hertz (e.g. 1000 for 1ms tick).
+ * @retval None
+ * @note   Uses AHB clock as source and fixed interrupt priority 0.
  */
-void SysTick_Init(SYSTICK_HandleTypeDef_t *hsystick)
+void SysTick_Init(uint32_t tick_hz)
+{
+    if (tick_hz == 0U)
+        return;
+
+    /* Stop & reset */
+    SysTick->CTRL = 0;
+    systick_ms = 0U;
+
+    /* Clock source: AHB */
+    SysTick->CTRL |= SYSTICK_CTRL_CLKSOURCE;
+
+    /* Reload calculation */
+    uint32_t reload = SystemCoreClock / tick_hz;
+    SysTick->LOAD = reload - 1U;
+    SysTick->VAL  = 0U;
+
+    /* Interrupt priority (optional, sabit 0 verilebilir) */
+    uint32_t tmp = SCB_SHPR3;
+    tmp &= ~(0xFFUL << 24U);
+    tmp |= (0x0U << 24U);
+    SCB_SHPR3 = tmp;
+
+    /* Enable interrupt & counter */
+    SysTick->CTRL |= SYSTICK_CTRL_TICKINT | SYSTICK_CTRL_ENABLE;
+}
+
+
+/**
+ * @brief  Initialize SysTick timer with advanced configuration.
+ * @param  hsystick Pointer to SYSTICK_HandleTypeDef_t structure containing
+ *         configuration parameters (clock source, tick frequency, interrupt usage, priority).
+ * @retval None
+ * @note   Supports both AHB and AHB/8 clock sources and configurable NVIC priority.
+ */
+void SysTick_InitEx(SYSTICK_HandleTypeDef_t *hsystick)
 {
     if (!hsystick || hsystick->tick_hz == 0U)
 	{
