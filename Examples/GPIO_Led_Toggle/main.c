@@ -14,7 +14,7 @@
 uint32_t SystemCoreClock = 16000000U;
 
 /* Function prototype */
-void GPIO_LedInit(void);
+static void GPIO_LedInit(void);
 
 /**
  * @brief  Main program.
@@ -43,7 +43,7 @@ int main(void)
  * @brief  Configure PD13 and PD15 as push-pull outputs for LEDs.
  * @note   Ensures GPIO clock is enabled and LEDs start in OFF state.
  */
-void GPIO_LedInit(void)
+static void GPIO_LedInit(void)
 {
     GPIO_InitTypeDef_t hgpio_led = {0};
 
