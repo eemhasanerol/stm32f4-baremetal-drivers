@@ -57,8 +57,9 @@ typedef struct {
 /* ---------------------------------------------------------------------------- */
 /* API Prototypes                                                             */
 /* -------------------------------------------------------------------------- */
-void SysTick_Init(SYSTICK_HandleTypeDef_t *hsystick);
-uint32_t SysTick_GetTick(void);
+void SysTick_Init(uint32_t tick_hz);
+void SysTick_InitEx(SYSTICK_HandleTypeDef_t *hsystick);
+
 void SysTick_Delay_ms(uint32_t ms);
 bool SysTick_Elapsed(uint32_t ms);
 bool SysTick_TimeoutElapsed(uint32_t start, uint32_t timeout_ms);
