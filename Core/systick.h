@@ -8,7 +8,6 @@
 #define INC_SYSTICK_H_
 
 #include "stm32f407xx.h"
-#include <stdint.h>
 #include <stdbool.h>
 
 #ifdef __cplusplus
