@@ -8,10 +8,10 @@
  */
 
 #include "stm32f407xx.h"
-#include "RCC.h"
-#include "GPIO.h"
-#include "Systick.h"
-#include "SPI.h"
+#include "rcc.h"
+#include "gpio.h"
+#include "systick.h"
+#include "spi.h"
 
 /* 16 MHz HSI clock */
 uint32_t SystemCoreClock = 16000000U;
@@ -21,6 +21,10 @@ uint32_t SystemCoreClock = 16000000U;
 #define RC522_CS_PIN    GPIO_PIN_0
 #define RC522_CS_LOW()  GPIO_WritePin(RC522_CS_PORT, RC522_CS_PIN, GPIO_PIN_RESET)
 #define RC522_CS_HIGH() GPIO_WritePin(RC522_CS_PORT, RC522_CS_PIN, GPIO_PIN_SET)
+
+#define MFRC522_REG_VERSION   0x37U
+#define MFRC522_VER_091        0x91U
+#define MFRC522_VER_092        0x92U
 
 /* Function prototypes */
 static void SPI1_Init(void);
@@ -37,11 +41,11 @@ int main(void)
     GPIO_LedInit();       /* LED setup */
 
     /* Read Version register (0x37), expect 0x91 or 0x92 */
-    uint8_t version = RC522_ReadReg(&hspi1, 0x37U);
+    uint8_t version = RC522_ReadReg(&hspi1, MFRC522_REG_VERSION);
 
     while (1)
     {
-        if ((version == 0x91U)|| (version == 0x92U))
+        if ((version == MFRC522_VER_091) || (version == MFRC522_VER_092))
         {
             GPIO_TogglePin(GPIOD, GPIO_PIN_13);  /* Device found */
             delay_ms(200);
