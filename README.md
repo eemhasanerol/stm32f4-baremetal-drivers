@@ -1,17 +1,16 @@
 # ⚙️ STM32F4 Bare-Metal Drivers
 
-Low-level peripheral drivers for **STM32F407** written entirely in **C** — no HAL, no CubeMX, just pure register-level control.  
-Developed to demonstrate understanding of **bare-metal embedded systems programming** and peripheral-level architecture.
+Low-level peripheral drivers for STM32F407, written in pure C — no HAL, no CubeMX, full register-level control.
 
 ---
 
 ## 🧩 Implemented Drivers
-- **RCC** – Clock control and peripheral enable
-- **GPIO** – Pin configuration and alternate functions
-- **SysTick** – Millisecond delay and timing
-- **EXTI** – External interrupt handling
-- **I2C** – Blocking I2C master communication
-- **SPI** – Full-duplex master communication
+- **RCC** – Clock configuration and peripheral enabling  
+- **GPIO** – General-purpose input/output and alternate functions  
+- **SysTick** – Millisecond tick timer and delay management  
+- **EXTI** – External interrupt configuration and handling  
+- **I2C** – I2C master communication interface  
+- **SPI** – SPI master communication interface  
 
 ---
 
@@ -34,7 +33,7 @@ Each project under `/Examples` demonstrates a peripheral in bare-metal operation
 ```
 stm32f4-baremetal-drivers/
 │
-├── Core/                 # Startup and system initialization
+├── Core/                 # Startup code and SysTick timer
 │
 ├── Drivers/              # RCC, GPIO, EXTI, I2C, SPI drivers
 │
@@ -47,17 +46,16 @@ stm32f4-baremetal-drivers/
 └── README.md
 ```
 
-## 🔧 Build Info
+## 🔧 Build Info  
 - **MCU:** STM32F407VG  
-- **Clock:** 16 MHz (HSI)  
-- **Toolchain:** STM32CubeIDE / Keil / arm-none-eabi-gcc  
-- **Language Standard:** C99  
+- **Toolchain:** STM32CubeIDE  
 - **Core:** ARM Cortex-M4  
 
 ---
 
-## 👨‍💻 Author
+## 👤 Author  
 **Hasan Erol**  
 *Embedded Software Engineer Intern*  
 Bare-metal firmware • STM32 • C • Peripheral Drivers  
-🔗 [github.com/hasanerol](https://github.com/hasanerol)
+📧 **eem.hasanerol@gmail.com**  
+🔗 [github.com/eemhasanerol](https://github.com/eemhasanerol)
