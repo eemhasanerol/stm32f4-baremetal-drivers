@@ -30,21 +30,22 @@ Each project under `/Examples` demonstrates a specific peripheral:
 ## 🗂 Directory Overview
 
 **Project Structure**
+
+```
 stm32f4-baremetal-drivers/
 │
-├── Core/ # Startup and system initialization
+├── Core/                 # Startup and system initialization
 │
-├── Drivers/ # RCC, GPIO, SysTick, EXTI, I2C, SPI drivers
+├── Drivers/              # RCC, GPIO, SysTick, EXTI, I2C, SPI drivers
 │
-├── Examples/ # Example projects using drivers
-│ ├── GPIO_LED_Toggle/
-│ ├── EXTI_Button_LED/
-│ ├── I2C_DeviceID_Read/
-│ └── SPI_DeviceID_Read/
+├── Examples/             # Example projects using drivers
+│   ├── GPIO_LED_Toggle/
+│   ├── EXTI_Button_LED/
+│   ├── I2C_DeviceID_Read/
+│   └── SPI_DeviceID_Read/
 │
 └── README.md
-
----
+```
 
 ## 🔧 Build Info
 - **MCU:** STM32F407VG  
