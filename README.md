@@ -21,8 +21,8 @@ Each project under `/Examples` demonstrates a peripheral in bare-metal operation
 |----------|--------------|
 | `GPIO_LED_Toggle` | Blinks LEDs using SysTick-based delay. |
 | `EXTI_Button_LED` | Toggles an LED when the user button is pressed via EXTI interrupt. |
-| `I2C_DeviceID_Read` | Reads device ID (e.g., MPU6050 WHO_AM_I) over I2C. |
-| `SPI_DeviceID_Read` | Reads device version register over SPI. |
+| `I2C_DeviceID_Read` | Reads device ID (e.g., MPU6050 WHO_AM_I). |
+| `SPI_DeviceID_Read` | Reads device version register. |
 
 ---
 
